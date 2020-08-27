@@ -19,7 +19,6 @@ class Login extends PureComponent{
    
     componentDidMount(){
         localStorage.clear();
-        console.log("you are in development branch");
     }
   
 
