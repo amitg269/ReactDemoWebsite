@@ -19,7 +19,7 @@ class Login extends PureComponent{
    
     componentDidMount(){
         localStorage.clear();
-        console.log("you are in prod");
+        console.log("you are in prod v2");
     }
   
 
