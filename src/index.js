@@ -7,16 +7,20 @@ import {createStore} from 'redux'
 import * as serviceWorker from './serviceWorker';
 import RootReducer  from './Redux/Reducers/RootReducer'
 import { BrowserRouter} from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react'
+import { persistStore } from "redux-persist";
 
-const store=createStore(
-  RootReducer
-)
+const store = createStore(RootReducer);
+const persistor = persistStore(store);
+
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
     <React.StrictMode>
-    <App />
+    <PersistGate persistor={persistor}>
+         <App />
+    </PersistGate>
   </React.StrictMode></BrowserRouter>
   </Provider>
   ,
