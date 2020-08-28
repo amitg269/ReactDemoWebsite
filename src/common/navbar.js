@@ -10,7 +10,6 @@ class NavBar extends PureComponent{
     }
 
     Logout=()=>{
-        debugger;
         var obj={};
         localStorage.clear();
         this.props.history.push('/login')         
