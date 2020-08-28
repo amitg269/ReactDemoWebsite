@@ -11,7 +11,6 @@ const persistConfig = {
 }
 
 //blacklist: ['LoginReducer'] ADD REDUCER NAME TO NOT PERSISIT THE STATE OF REDUCER
-
 const RootReducer=combineReducers({
      PurchaseReducer,
       LoginReducer
