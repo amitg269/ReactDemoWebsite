@@ -1,4 +1,4 @@
-import {SELECT_ROLE,LOGIN_INFO} from '../Action/LoginAction' 
+import {SELECT_ROLE,LOGIN_INFO,LOGOUT} from '../Action/LoginAction' 
 
 
 const InitialState={
@@ -18,6 +18,13 @@ export function LoginReducer(state=InitialState,action){
                 return{
                 ...state,
                 loginInfo:action.payload
+            }
+            break
+            case LOGOUT:{
+                localStorage.clear();
+                    return{
+                        state
+                    }
             }
             default: return state
     }

@@ -1,6 +1,7 @@
 import React,{PureComponent} from 'react'
 import {connect} from 'react-redux'; 
 
+
 class Dashboard extends PureComponent{
 constructor(props){
     super(props);
@@ -9,10 +10,12 @@ constructor(props){
 componentDidMount(){
     
 }
+
 render(){
     return(
         <div>
             <h2>Hello This is Dashboard</h2>
+            
         </div>
     )
 }
